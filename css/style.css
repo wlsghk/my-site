@@ -1,0 +1,9 @@
+/* 헤더 시작 */
+.bg-body-tertiary {
+    background-color: #fff;
+    --bs-bg-opacity: 0;
+}
+
+.navbar-brand-txt {
+    font-size: 16px;
+}
