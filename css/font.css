@@ -21,3 +21,11 @@
     font-family: 'Pretendard-L';
     src: url(/css/font/Pretendard-ExtraLight.woff);
 }
+
+/* 네이게이션바 로고 폰트 */
+@font-face {
+    font-family: 'LeferiPoint-BlackObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

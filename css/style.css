@@ -7,12 +7,18 @@ body {
     color: #222;
 }
 
+section {
+    width: 100%;
+    height: 100vh;
+}
+
 /* 굵은 폰트 */
 .bold {
     font-family: 'Pretendard-EB';
 }
 
 /* 헤더 시작 */
+
 .navbar-brand {
     color: #222;
 }
@@ -38,3 +44,5 @@ body {
 .navbar-toggler:focus {
     box-shadow: none;
 }
+
+.navbar-text {}
