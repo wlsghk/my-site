@@ -1,0 +1,23 @@
+/* 프리텐다드 기본 */
+@font-face {
+    font-family: 'Pretendard-R';
+    src: url(/font/Pretendard-Regular.woff);
+}
+
+/* 프리텐다드 굵게 */
+@font-face {
+    font-family: 'Pretendard-B';
+    src: url(/css/font/Pretendard-Bold.woff);
+}
+
+/* 프리테다드 매우 굵게 */
+@font-face {
+    font-family: 'Pretendard-EB';
+    src: url(/css/font/Pretendard-Black.woff);
+}
+
+/* 프리텐다드 가늘게 */
+@font-face {
+    font-family: 'Pretendard-L';
+    src: url(/css/font/Pretendard-ExtraLight.woff);
+}

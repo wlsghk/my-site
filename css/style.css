@@ -1,4 +1,22 @@
+/* 공통 */
+body {
+    font-family: 'Pretendard-R';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #222;
+}
+
+/* 굵은 폰트 */
+.bold {
+    font-family: 'Pretendard-EB';
+}
+
 /* 헤더 시작 */
+.navbar-brand {
+    color: #222;
+}
+
 .bg-body-tertiary {
     background-color: #fff;
     --bs-bg-opacity: 0;
@@ -6,4 +24,17 @@
 
 .navbar-brand-txt {
     font-size: 16px;
+    font-family: 'Pretendard-R';
+}
+
+.nav-link {
+    color: #222;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
