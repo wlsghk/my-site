@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        .graph {
+            background: #ccc;
+            height: 40px;
+            border-radius: 40px;
+            margin: 0 0 30px;
+        }
+
+        .graph span {
+            display: block;
+            width: 75%;
+            border-radius: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: right;
+            padding: 0 10px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        .stack1 {
+            animation: stack 2s 1;
+            background-color: pink;
+        }
+
+        .stack2 {
+            animation: stack2 2s 1;
+            background-color: skyblue;
+        }
+
+        .stack3 {
+            animation: stack3 2s 1;
+            background-color: orange;
+        }
+
+
+        @keyframes stack {
+            0% {
+                width: 0;
+                color: rgba(255, 255, 255, 0);
+            }
+
+            40% {
+                color: rgba(255, 255, 255, 1);
+            }
+
+            100% {
+                width: 75%;
+            }
+        }
+
+        @keyframes stack2 {
+            0% {
+                width: 0;
+                color: rgba(255, 255, 255, 0);
+            }
+
+            40% {
+                color: rgba(255, 255, 255, 1);
+            }
+
+            100% {
+                width: 60%;
+            }
+        }
+
+        @keyframes stack3 {
+            0% {
+                width: 0;
+                color: rgba(255, 255, 255, 0);
+            }
+
+            40% {
+                color: rgba(255, 255, 255, 1);
+            }
+
+            100% {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="graph"><span class="stack1">75%</span></div>
+    <div class="graph"><span class="stack2" style="width: 60%">60%</span></div>
+    <div class="graph"><span class="stack3" style="width: 25%">25%</span></div>
+</body>
+
+</html>
