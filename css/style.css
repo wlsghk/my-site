@@ -37,6 +37,11 @@ section {
     color: #222;
 }
 
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #222;
+}
+
 .navbar-toggler {
     border: none;
 }
@@ -127,6 +132,24 @@ section {
     width: 40%;
 }
 
+.stack5 {
+    animation: stack5 2s 1;
+    background-color: #000;
+    width: 60%;
+}
+
+.stack6 {
+    animation: stack6 2s 1;
+    background-color: #f44336;
+    width: 90%;
+}
+
+.stack7 {
+    animation: stack7 2s 1;
+    background: linear-gradient(45deg, #ec4d6b, #af83c8, #7cb75e);
+    width: 85%;
+}
+
 
 @keyframes stack1 {
     0% {
@@ -185,5 +208,50 @@ section {
 
     100% {
         width: 40%;
+    }
+}
+
+@keyframes stack5 {
+    0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+    }
+
+    40% {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes stack6 {
+    0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+    }
+
+    40% {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes stack7 {
+    0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+    }
+
+    40% {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        width: 85%;
     }
 }
