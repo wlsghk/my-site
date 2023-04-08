@@ -13,8 +13,12 @@ section {
 }
 
 /* 굵은 폰트 */
-.bold {
+.bolder {
     font-family: 'Pretendard-EB';
+}
+
+.bold {
+    font-family: 'Pretendard-B';
 }
 
 /* 헤더 시작 */
@@ -67,9 +71,79 @@ section {
 }
 
 /* 스킬 */
+.my-pic img {
+    width: 100%;
+    height: 65vh;
+    margin-bottom: 30px;
+}
+
+.my-explain {
+    text-align: justify;
+    font-size: 20px;
+    max-width: 100%;
+}
+
 .skill {
     margin: 96px 4.1667vw;
     padding: 12px;
+}
+
+.skill-title {
+    font-size: 24px;
+    margin: 0px 0px 30px 5px;
+    padding: 0px 15px;
+}
+
+.switch-button {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    margin-left: 16px;
+}
+
+.switch-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.onoff-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: #ccc;
+    box-shadow: inset 1px 5px 1px #999;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.onoff-switch:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .5s;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.switch-button input:checked+.onoff-switch {
+    background-color: #424242;
+    box-shadow: inset 1px 5px 1px #000;
+}
+
+.switch-button input:checked+.onoff-switch:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
 
 .skill-box ul,
@@ -82,6 +156,17 @@ section {
 .skill-item {
     align-items: center;
     gap: 2vw;
+    opacity: 0.5;
+}
+
+.html.on,
+.css.on,
+.js.on,
+.react.on,
+.adobe.on,
+.git.on,
+.figma.on {
+    opacity: 1;
 }
 
 .skill-item img {
@@ -99,13 +184,23 @@ section {
 }
 
 .graph span {
-    display: block;
+    display: none;
     border-radius: 40px;
     height: 40px;
     line-height: 40px;
     text-align: right;
     box-sizing: border-box;
     color: #fff;
+}
+
+.html-graph.on,
+.css-graph.on,
+.js-graph.on,
+.react-graph.on,
+.adobe-graph.on,
+.git-graph.on,
+.figma-graph.on {
+    display: block;
 }
 
 .stack1 {
@@ -254,4 +349,17 @@ section {
     100% {
         width: 85%;
     }
+}
+
+/* 포트폴리오 */
+.portfolio-box {
+    width: 100%;
+    height: 35vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-item {
+    background-color: red;
+    height: 100%;
 }
