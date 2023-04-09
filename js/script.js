@@ -2,6 +2,7 @@ window.onload = function () {
     // 원 페이지 스크롤
     docSlider.init();
 
+    // 스킬 그래프
     const html = document.querySelector('.html');
     const css = document.querySelector('.css');
     const js = document.querySelector('.js');
@@ -34,5 +35,11 @@ window.onload = function () {
         gitGraph.classList.toggle('on');
         adobeGraph.classList.toggle('on');
         figmaGraph.classList.toggle('on')
+    })
+
+    // 포트폴리오 설명
+    const daegu = document.querySelector('.daegu-img img');
+    daegu.addEventListener('mouseover', e => {
+        this.innerHTML = `<div>Hi?</div>`
     })
 }
