@@ -13,7 +13,7 @@ window.onload = function () {
         text.innerHTML = spaned;
     }
 
-    var headline = document.querySelector("h1");
+    var headline = document.querySelector(".main h1");
 
     spanText(headline);
 
@@ -27,6 +27,8 @@ window.onload = function () {
     })
 
     // 스킬 그래프
+    const myPic = document.querySelector('.my-pic img')
+    const myExplain = document.querySelector('.my-explain')
     const html = document.querySelector('.html');
     const css = document.querySelector('.css');
     const js = document.querySelector('.js');
@@ -44,6 +46,9 @@ window.onload = function () {
     const switchBtn = document.querySelector('.onoff-switch')
 
     switchBtn.addEventListener('click', e => {
+        myPic.classList.toggle('on');
+        myExplain.classList.toggle('on');
+
         html.classList.toggle('on');
         css.classList.toggle('on');
         js.classList.toggle('on');

@@ -59,7 +59,15 @@ section {
     box-shadow: none;
 }
 
-.navbar-text {}
+.navbar-logo img {
+    width: 30px;
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-logo {
+        display: none;
+    }
+}
 
 /* 컨테이너 */
 .wrapper {}
@@ -67,12 +75,12 @@ section {
 /* 메인페이지 */
 .main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main-title,
-.main-title2 {
+.main-title {
     font-size: 100px;
 }
 
@@ -100,12 +108,26 @@ section {
     width: 100%;
     height: 65vh;
     margin-bottom: 30px;
+    filter: blur(10px) saturate(50%);
+}
+
+.my-pic img.on {
+    filter: none;
 }
 
 .my-explain {
     text-align: justify;
     font-size: 20px;
     max-width: 100%;
+    letter-spacing: -1.5px;
+    line-height: 1.8;
+    color: #ccc;
+    filter: blur(10px);
+}
+
+.my-explain.on {
+    color: #222;
+    filter: none;
 }
 
 .skill {
