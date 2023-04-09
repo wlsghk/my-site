@@ -74,9 +74,9 @@ window.onload = function () {
     const codingImg = document.querySelector('.final-img')
 
     finalText.addEventListener('mouseover', e => {
-        codingImg.src = "../img/coding.gif"
+        codingImg.src = "./img/coding.gif"
     })
     finalText.addEventListener('mouseout', e => {
-        codingImg.src = "../img/coding.png"
+        codingImg.src = "./img/coding.png"
     })
 }
