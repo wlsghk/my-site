@@ -42,6 +42,10 @@ section {
     color: #222;
 }
 
+.nav-link.on {
+    color: white;
+}
+
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
     color: #222;
@@ -67,8 +71,28 @@ section {
     align-items: center;
 }
 
-.main-title {
+.main-title,
+.main-title2 {
     font-size: 100px;
+}
+
+.main-title span {
+    display: inline-block;
+    animation: slideLeft 1.5s forwards;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 /* 스킬 */
@@ -400,13 +424,25 @@ section {
 /* 마지막 페이지 */
 .final {
     align-items: center;
+    align-content: center;
     background-color: #222;
+    flex-wrap: norwap;
 }
 
-video {
+/* .final-video {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.final-video video {
     width: 100%;
-    height: 100%;
-    padding: 0 !important;
+} */
+
+.final img {
+    height: 100vh;
+    padding: 0;
 }
 
 .final-text {
@@ -415,5 +451,18 @@ video {
     position: absolute;
     transform: 50%;
     color: rgba(255, 255, 255, 0.5);
-    margin: 4.5vw;
+    margin-left: 4.5vw;
+    line-height: 1.2;
+}
+
+.final-text:hover span {
+    color: rgba(255, 255, 255, 1);
+}
+
+.gmail {
+    color: #fff;
+    position: fixed;
+    bottom: 190px;
+    right: 200px;
+    font-size: 18px;
 }

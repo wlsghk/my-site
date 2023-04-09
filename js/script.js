@@ -2,6 +2,30 @@ window.onload = function () {
     // 원 페이지 스크롤
     docSlider.init();
 
+    // 메인 페이지 텍스트 애니메이션
+    var spanText = function spanText(text) {
+        var string = text.innerText;
+        var spaned = '';
+        for (var i = 0; i < string.length; i++) {
+            if (string.substring(i, i + 1) === ' ') spaned += string.substring(i, i + 1);
+            else spaned += '<span>' + string.substring(i, i + 1) + '</span>';
+        }
+        text.innerHTML = spaned;
+    }
+
+    var headline = document.querySelector("h1");
+
+    spanText(headline);
+
+    let animations = document.querySelectorAll('.main-title');
+
+    animations.forEach(animation => {
+        let letters = animation.querySelectorAll('.main-title span');
+        letters.forEach((letter, i) => {
+            letter.style.animationDelay = (i * 0.1) + 's';
+        })
+    })
+
     // 스킬 그래프
     const html = document.querySelector('.html');
     const css = document.querySelector('.css');
@@ -37,9 +61,17 @@ window.onload = function () {
         figmaGraph.classList.toggle('on')
     })
 
-    // 포트폴리오 설명
-    const daegu = document.querySelector('.daegu-img img');
-    daegu.addEventListener('mouseover', e => {
-        this.innerHTML = `<div>Hi?</div>`
+    const body = document.querySelectorAll('section')
+    const nav = document.querySelector(".navbar")
+
+    // 파이널 페이지 마우스 오버시 배경 재생
+    const finalText = document.querySelector('.final-text')
+    const codingImg = document.querySelector('.final-img')
+
+    finalText.addEventListener('mouseover', e => {
+        codingImg.src = "../img/coding.gif"
+    })
+    finalText.addEventListener('mouseout', e => {
+        codingImg.src = "../img/coding.png"
     })
 }
