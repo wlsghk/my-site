@@ -403,48 +403,133 @@ section {
 }
 
 /* 포트폴리오 */
-.portfolio {
-    align-items: center;
-    align-content: center;
-    text-align: center;
-}
-
-.portfolio-item {
-    height: 35%;
-    margin-top: 50px;
-}
-
-.daegu-img img {
-    width: 88%;
-    height: 250px;
-    border-radius: 20px;
-    padding: 0;
-}
-
-.daegu-btn {
-    justify-content: center;
-    padding-top: 15px;
-    margin-left: 30px;
+.swiper {
     width: 90%;
-    gap: 10px;
+    height: 700px;
+    transform: translate(0%, 35%);
 }
 
-.btn-outline-dark {
-    border-radius: 20px;
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
 }
 
-.hyft-img img {
-    width: 88%;
-    height: 250px;
-    border-radius: 20px;
-    padding: 0;
+.swiper-slide {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.dosirak-img img {
-    width: 88%;
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: calc(var(--swiper-navigation-size)/ 44) !important;
+    position: absolute;
+    top: 30% !important;
+    margin-top: none !important;
     border-radius: 20px;
-    padding: 0;
-    height: 250px;
+    color: #222 !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+}
+
+.conteudo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center
+}
+
+.tela {
+    background: #fff;
+    width: 95%;
+    height: 45vh;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.1);
+}
+
+.area1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/daegu.png');
+    background-size: cover;
+    color: white;
+}
+
+.area2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/hyft.png');
+    background-size: cover;
+    color: white;
+}
+
+.black-box {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    animation: visible 0.5s;
+}
+
+
+.area1 span,
+.area2 span {
+    font-size: 20px;
+}
+
+.area1 p,
+.area2 p {
+    z-index: 999;
+    position: absolute;
+    transform: translate(5%);
+    bottom: 0;
+    text-align: left;
+    width: 90%;
+    font-size: 18px;
+}
+
+.area1:hover .black-box,
+.area2:hover .black-box {
+    display: block;
+}
+
+.black-box:hover .area-subtitle {
+    display: block;
+    line-height: 2;
+}
+
+
+@keyframes visible {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.7;
+    }
+}
+
+.portfolio-btn {
+    border-radius: 20px;
+    margin-top: 15px;
 }
 
 /* 마지막 페이지 */
@@ -454,17 +539,6 @@ section {
     background-color: #222;
     flex-wrap: norwap;
 }
-
-/* .final-video {
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.final-video video {
-    width: 100%;
-} */
 
 .final img {
     height: 100vh;
@@ -491,4 +565,12 @@ section {
     bottom: 190px;
     right: 200px;
     font-size: 18px;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    font-size: 16px;
+    bottom: 50px;
+    left: 4.3vw;
 }

@@ -6,46 +6,225 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <style>
+        html,
         body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
             margin: 0;
             padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            width: 90%;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #ffffff;
         }
 
-        p {
-            position: relative;
-            font-family: sans-serif;
-            text-transform: uppercase;
-            font-size: 2em;
-            letter-spacing: 4px;
-            overflow: hidden;
-            background: linear-gradient(90deg, #000, #fff, #000);
-            background-repeat: no-repeat;
-            background-size: 80%;
-            animation: animate 5s linear infinite;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: rgba(255, 255, 255, 0);
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        @keyframes animate {
-            0% {
-                background-position: -500%;
-            }
+        .swiper {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-            100% {
-                background-position: 500%;
-            }
+        * {
+            margin: 0 auto;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .conteudo {
+            width: 100%;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center
+        }
+
+        .tela {
+            background: #fff;
+            width: 800px;
+            max-width: 95%;
+            height: 500px;
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .toolbar {
+            width: 100%;
+            height: 50px;
+            background: #E5E3E5
+        }
+
+        .tab {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            float: left;
+            margin-left: 10px;
+            text-align: center
+        }
+
+        .tab ul li {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        .vermelho {
+            background: #FF4E4E !important;
+        }
+
+        .amarelo {
+            background: #FFB92D !important;
+        }
+
+        .verde {
+            background: #00CA3B !important;
+        }
+
+        .area {
+            width: 100%;
+            height: 90%;
+            background: url('./img/daegu.png');
+            background-size: cover;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .area h1 {
+            text-align: center;
+            padding-top: 20px;
+            font-family: 'Bitter', serif;
+            opacity: 0.6
+        }
+
+        .area p {
+            text-align: left;
+            padding-top: 20px;
+            font-family: 'Roboto', sans-serif;
+            width: 90%;
+            opacity: 0.4
+        }
+
+        .creditos {
+            padding-top: 20px;
+        }
+
+        .creditos a {
+            color: #fff;
+            opacity: 0.6;
+            transition: 0.7s;
+            text-decoration: none;
+            z-index: 999;
+        }
+
+        .creditos a:hover,
+        .creditos a:focus {
+            opacity: 1;
+            font-size: 18px
+        }
+
+        .portfolio-btn {
+            margin-top: 100px;
         }
     </style>
 </head>
 
 <body>
-    <p>Hello, <br> I'm Front-end Developer!</p>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="conteudo">
+                    <div class="tela">
+                        <div class="toolbar">
+                            <div class="tab">
+                                <ul>
+                                    <li class="vermelho"></li>
+                                    <li class="amarelo"></li>
+                                    <li class="verde"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="area">
+                            <h1>어서와, 대구는 처음이지?</h1>
+                            <p>
+                                대구 여행 브랜딩 사이트 어쩌구.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="creditos"><a href="https://github.com/gustavoquinalha"
+                            target="_blank">@gustavoquinalha</a></div>
+                </div>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>

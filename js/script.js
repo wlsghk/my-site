@@ -66,8 +66,29 @@ window.onload = function () {
         figmaGraph.classList.toggle('on')
     })
 
-    const body = document.querySelectorAll('section')
-    const nav = document.querySelector(".navbar")
+    // 포트폴리오 스와이퍼
+    var secondSwiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".projects-box",
+            clickable: true,
+        },
+        breakpoints: {
+            "@0.00": {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            "@0.75": {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        },
+    });
 
     // 파이널 페이지 마우스 오버시 배경 재생
     const finalText = document.querySelector('.final-text')

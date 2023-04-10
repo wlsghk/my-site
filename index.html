@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- aos CSS -->
     <link rel="stylesheet" href="./css/aos.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- 파비콘 -->
-    <link rel="icon" href="./icon/logo.png" />
+    <link rel="icon" href="./icon/pavi.png" />
     <title>Baevolution⋆⁺₊⋆Portfolio</title>
 </head>
 
@@ -52,7 +54,8 @@
     <!-- 헤더 끝 -->
     <div class="docSlider">
         <section class="main">
-            <h1 class="main-title bolder">Hello, I'm Front-end Developer!
+            <h1 class="main-title bolder">
+                Hello, I'm Front-end Developer!
             </h1>
         </section>
         <!-- 소개 및 스킬 -->
@@ -98,9 +101,8 @@
         </section>
         <!-- 소개 및 스킬 끝 -->
         <!-- 포트폴리오 시작 -->
-        <!-- 포트폴리오 시작 -->
         <section class="portfolio row">
-            <div class="col-2"></div>
+            <!-- <div class="col-2"></div>
             <div class="col-4 portfolio-item">
                 <div class="daegu-img"><img src="./img/daegu.png" alt=""></div>
                 <div class="daegu-btn row">
@@ -127,15 +129,62 @@
             <div class="col-4 portfolio-item">
                 <div class="baevolution"></div>
             </div>
-            <div class="col-2"></div>
+            <div class="col-2"></div> --><!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-daegu">
+                        <div class="conteudo">
+                            <div class="tela">
+                                <div class="area1">
+                                    <div class="black-box">
+                                        <p class="area-subtitle"><span class="bold">어서와, 대구는 처음이지? | 22. 11. 14 ~ 22.
+                                                12. 09. | 기여도
+                                                50%</span><br />심리테스트 결과에
+                                            따라
+                                            레벨을 나누어 여행 경로를 추천하는 대구 여행 브랜딩 사이트입니다.
+                                            랜딩페이지(first)와 상세페이지(detail)를
+                                            담당했습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark portfolio-btn">Demo</button>
+                        <button type="button" class="btn btn-outline-dark portfolio-btn">Github</button>
+                    </div>
+                    <div class="swiper-slide swiper-hyft">
+                        <div class="conteudo">
+                            <div class="tela">
+                                <div class="area2">
+                                    <div class="black-box">
+                                        <p class="area-subtitle"><span class="bold">How You Feel Today? | 23. 01. 09. ~
+                                                23. 02. 09. | 기여도
+                                                25%</span><br />‘감정 소비’에 초점을 맞추어 여섯 가지 감정에 따라 품목을 다르게 판매하는 쇼핑몰 사이트입니다.
+                                            메인페이지를 담당했습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark portfolio-btn">Demo</button>
+                        <button type="button" class="btn btn-outline-dark portfolio-btn">Github</button>
+                    </div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
+        <!-- 포트폴리오 끝 -->
         <section class="final row">
             <img src="./img/coding.png" class="final-img" alt="">
             <h1 class="col-8 bolder final-text">
                 <span>I MAKE</span> CREATIVES,<br><span>TAKE</span> WORKS,<br><span>WRITE</span> CODES, <BR>PRODUCE,
                 ANIMATE,<br><span>AND</span> UI/UX DESIGN.
             </h1>
-            <div class="col-1 gmail"><span class="bold">Contact:</span> baevolutiond@gmail.com</div>
+            <div class="col-1 gmail"><span class="bold">Contact│</span> baevolutiond@gmail.com
+            </div>
+            <p class="copyright col-10">ⓒ 2023. 배진화 all rights reserved.</p>
         </section>
     </div>
     <!-- Bootstrap JS -->
@@ -148,6 +197,8 @@
     <script src="./js/docSlider.min.js"></script>
     <!-- my Js -->
     <script src="./js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
 
 </html>
