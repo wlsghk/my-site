@@ -135,11 +135,14 @@ window.onload = function () {
     // 파이널 페이지 마우스 오버시 배경 재생
     const finalText = document.querySelector('.final-text')
     const codingImg = document.querySelector('.final-img')
+    const finalGoal = document.querySelector('.final-goal')
 
     finalText.addEventListener('mouseover', e => {
         codingImg.src = "./img/coding.gif"
+        finalGoal.style.display = "block";
     })
     finalText.addEventListener('mouseout', e => {
         codingImg.src = "./img/coding.png"
+        finalGoal.style.display = "none"
     })
 }
