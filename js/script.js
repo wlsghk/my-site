@@ -90,6 +90,48 @@ window.onload = function () {
         },
     });
 
+    // 포트폴리오 버튼 클릭 시 페이지 이동
+    const daeguDemo = document.querySelector('.daegu-demo-btn');
+    const daeguGithub = document.querySelector('.daegu-github-btn');
+    const hyftDemo = document.querySelector('.hyft-demo-btn');
+    const hyftGithub = document.querySelector('.hyft-github-btn');
+    const dosirakDemo = document.querySelector('.dosirak-demo-btn');
+    const dosirakGithub = document.querySelector('.dosirak-github-btn');
+    const baevolutionDemo = document.querySelector('.baevolution-demo-btn');
+    const baevolutionGithub = document.querySelector('.baevolution-github-btn');
+
+    daeguDemo.addEventListener('click', e => {
+        window.open('https://wlsghk.github.io/firstProject/html/first.html');
+    })
+
+    daeguGithub.addEventListener('click', e => {
+        window.open('https://github.com/wlsghk/firstProject');
+    })
+
+    hyftDemo.addEventListener('click', e => {
+        window.open('https://sanghyuk95.github.io/HYFT/sanghyuk/index.html');
+    })
+
+    hyftGithub.addEventListener('click', e => {
+        window.open('https://github.com/wlsghk/lastProject');
+    })
+
+    dosirakDemo.addEventListener('click', e => {
+        window.open('https://wlsghk.github.io/dosiraktong/index.html');
+    })
+
+    dosirakGithub.addEventListener('click', e => {
+        window.open('https://github.com/wlsghk/dosiraktong');
+    })
+
+    baevolutionDemo.addEventListener('click', e => {
+        window.open('https://wlsghk.github.io/my-site/index.html');
+    })
+
+    baevolutionGithub.addEventListener('click', e => {
+        window.open('https://github.com/wlsghk/my-site');
+    })
+
     // 파이널 페이지 마우스 오버시 배경 재생
     const finalText = document.querySelector('.final-text')
     const codingImg = document.querySelector('.final-img')

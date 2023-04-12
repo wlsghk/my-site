@@ -479,6 +479,24 @@ section {
     color: white;
 }
 
+.area3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/dosirak.png');
+    background-size: cover;
+    color: white;
+}
+
+.area4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/dosirak.png');
+    background-size: cover;
+    color: white;
+}
+
 .black-box {
     position: relative;
     display: none;
@@ -491,12 +509,16 @@ section {
 
 
 .area1 span,
-.area2 span {
+.area2 span,
+.area3 span,
+.area4 span {
     font-size: 20px;
 }
 
 .area1 p,
-.area2 p {
+.area2 p,
+.area3 p,
+.area4 p {
     z-index: 999;
     position: absolute;
     transform: translate(5%);
@@ -507,7 +529,9 @@ section {
 }
 
 .area1:hover .black-box,
-.area2:hover .black-box {
+.area2:hover .black-box,
+.area3:hover .black-box,
+.area4:hover .black-box {
     display: block;
 }
 
