@@ -7,70 +7,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* 멘토링 상태변경 토글 */
-        /* 멘토 상태변경 토글 */
-        .toggle_box {
-            display: flex;
-            align-items: center;
-            z-index: -1;
-            margin-top: 20px;
+        .c {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            z-index: 10;
+            pointer-events: none;
         }
 
-        #custom_input {
-            display: none;
-        }
-
-        #custom_input+label.toggle_btn_label {
+        .ci {
+            width: 60px;
+            height: 60px;
+            border: 2px solid hsla(150 70% 70% / .6);
+            border-radius: 100px;
+            box-shadow: inset 0 0 25px hsla(150 70% 70% / .7);
+            transform: translate(-50%, -50%);
             position: relative;
-            width: 12rem;
-            height: 3rem;
+            z-index: 20;
         }
 
-        #custom_input+label.toggle_btn_label>span {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 40px;
-            background-color: #ccc;
-
-            transition: all .4s;
-
+        .co {
+            width: 10px;
+            height: 10px;
+            border-radius: 100px;
+            background: hsla(var(--hue) 70% 70% / .7);
+            position: fixed;
+            transition: 1s;
         }
 
-        #custom_input+label.toggle_btn_label>span:before {
+        span {
+            display: inline-block;
+            transform: rotate(var(--r));
+        }
+
+        .abs-profiles {
+            position: fixed;
+            right: 20px;
+            bottom: 23px;
+            filter: grayscale(1);
+        }
+
+        .abs-profiles a {
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        /* 메인페이지 */
+        .main {
             display: flex;
-            position: absolute;
-            height: 2.5rem;
-            width: fit-content;
-            padding: 0 1rem;
-            left: 0.25rem;
-            bottom: 0.25rem;
-            border-radius: 20px;
-            background-color: #fff;
-
-            content: "초기값";
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            font-weight: bold;
-            color: rgb(29, 29, 29);
+        }
 
-            -webkit-transition: all .4s;
-            transition: all .4s;
+        .main-title {
+            font-size: 100px;
+        }
+
+        .main-title span {
+            display: inline-block;
+            animation: slideLeft 1.5s forwards;
+            opacity: 0;
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(200px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0%);
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- 토글 -->
-    <div class="toggle_box">
-        <input type="checkbox" id="custom_input"></input>
-        <label for="custom_input" class="toggle_btn_label">
-            <span></span>
-        </label>
-    </div>
 
+
+    <section class="main">
+        <div class="c">
+            <div class="ci"></div>
+        </div>
+        <h1 class="main-title bolder">
+            Hello, I'm Front-end Developer!
+        </h1>
+    </section>
+
+    <div class="abs-profiles">
+        <a href="https://dribbble.com/AbubakerSaeed" rel="nofollow noreferrer" target="_blank">
+            <img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg"
+                style="max-width: 24px">
+        </a>
+
+        <svg viewBox="0 0 32 32" height="24px">
+            <path fill="#1da1f2"
+                d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z">
+            </path>
+        </svg>
+        </a>
+    </div>
 </body>
+<script>
+    let c = document.querySelector(".c");
+
+    window.addEventListener("mousemove", (e) => {
+
+        requestAnimationFrame(() => {
+            c.style.top = e.pageY + "px";
+            c.style.left = e.pageX + "px";
+
+            let d = document.createElement("div");
+            d.classList.add('co');
+            d.style.top = e.pageY + "px";
+            d.style.left = e.pageX + "px";
+            d.style.setProperty(`--hue`, Math.floor(Math.random() * 360));
+
+            setTimeout(() => {
+                d.style.opacity = 0;
+                d.style.transform = 'scale(12)';
+                setTimeout(() => c.removeChild(d), 1100);
+            }, 500)
+
+            c.appendChild(d);
+        })
+
+    });
+    // 메인 페이지 텍스트 애니메이션
+    var spanText = function spanText(text) {
+        var string = text.innerText;
+        var spaned = '';
+        for (var i = 0; i < string.length; i++) {
+            if (string.substring(i, i + 1) === ' ') spaned += string.substring(i, i + 1);
+            else spaned += '<span>' + string.substring(i, i + 1) + '</span>';
+        }
+        text.innerHTML = spaned;
+    }
+
+    var headline = document.querySelector(".main h1");
+
+    spanText(headline);
+
+    let animations = document.querySelectorAll('.main-title');
+
+    animations.forEach(animation => {
+        let letters = animation.querySelectorAll('.main-title span');
+        letters.forEach((letter, i) => {
+            letter.style.animationDelay = (i * 0.1) + 's';
+        })
+    })
+</script>
 
 </html>
