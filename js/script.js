@@ -180,6 +180,15 @@ window.onload = function () {
     });
 
     // 미디어쿼리
+    const skillBox = document.querySelector('.skill-box');
+    function mobResize() {
+        if (matchMedia("screen and (max-width: 991px)").matches) {
+            myPic.src = "./img/myprofile-mobile.png"
+        } else {
+            myPic.src = "./img/myprofile.png"
+        }
+    }
+    mobResize();
     window.addEventListener('resize', e => {
         if (innerWidth <= 991) {
             myPic.src = "./img/myprofile-mobile.png"
