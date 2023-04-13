@@ -147,58 +147,81 @@ window.onload = function () {
     })
 
     // 마우스 커서
+    // const cursor = document.querySelector('#cursor');
+    // const cursorCircle = cursor.querySelector('.cursor__circle');
 
-    const cursor = document.querySelector('#cursor');
-    const cursorCircle = cursor.querySelector('.cursor__circle');
+    // const mouse = { x: -100, y: -100 }; // mouse pointer's coordinates
+    // const pos = { x: 0, y: 0 }; // cursor's coordinates
+    // const speed = 0.1; // between 0 and 1
 
-    const mouse = { x: -100, y: -100 }; // mouse pointer's coordinates
-    const pos = { x: 0, y: 0 }; // cursor's coordinates
-    const speed = 0.1; // between 0 and 1
+    // const updateCoordinates = e => {
+    //     mouse.x = e.clientX;
+    //     mouse.y = e.clientY;
+    // }
 
-    const updateCoordinates = e => {
-        mouse.x = e.clientX;
-        mouse.y = e.clientY;
-    }
-
-    window.addEventListener('mousemove', updateCoordinates);
-
-
-    function getAngle(diffX, diffY) {
-        return Math.atan2(diffY, diffX) * 180 / Math.PI;
-    }
-
-    function getSqueeze(diffX, diffY) {
-        const distance = Math.sqrt(
-            Math.pow(diffX, 2) + Math.pow(diffY, 2)
-        );
-        const maxSqueeze = 0.15;
-        const accelerator = 1500;
-        return Math.min(distance / accelerator, maxSqueeze);
-    }
+    // window.addEventListener('mousemove', updateCoordinates);
 
 
-    const updateCursor = () => {
-        const diffX = Math.round(mouse.x - pos.x);
-        const diffY = Math.round(mouse.y - pos.y);
+    // function getAngle(diffX, diffY) {
+    //     return Math.atan2(diffY, diffX) * 180 / Math.PI;
+    // }
 
-        pos.x += diffX * speed;
-        pos.y += diffY * speed;
+    // function getSqueeze(diffX, diffY) {
+    //     const distance = Math.sqrt(
+    //         Math.pow(diffX, 2) + Math.pow(diffY, 2)
+    //     );
+    //     const maxSqueeze = 0.15;
+    //     const accelerator = 1500;
+    //     return Math.min(distance / accelerator, maxSqueeze);
+    // }
 
-        const angle = getAngle(diffX, diffY);
-        const squeeze = getSqueeze(diffX, diffY);
+    // const updateCursor = () => {
+    //     const diffX = Math.round(mouse.x - pos.x);
+    //     const diffY = Math.round(mouse.y - pos.y);
 
-        const scale = 'scale(' + (1 + squeeze) + ', ' + (1 - squeeze) + ')';
-        const rotate = 'rotate(' + angle + 'deg)';
-        const translate = 'translate3d(' + pos.x + 'px ,' + pos.y + 'px, 0)';
+    //     pos.x += diffX * speed;
+    //     pos.y += diffY * speed;
 
-        cursor.style.transform = translate;
-        cursorCircle.style.transform = rotate + scale;
-    };
+    //     const angle = getAngle(diffX, diffY);
+    //     const squeeze = getSqueeze(diffX, diffY);
 
-    function loop() {
-        updateCursor();
-        requestAnimationFrame(loop);
-    }
+    //     const scale = 'scale(' + (1 + squeeze) + ', ' + (1 - squeeze) + ')';
+    //     const rotate = 'rotate(' + angle + 'deg)';
+    //     const translate = 'translate3d(' + pos.x + 'px ,' + pos.y + 'px, 0)';
 
-    requestAnimationFrame(loop);
+    //     cursor.style.transform = translate;
+    //     cursorCircle.style.transform = rotate + scale;
+    // };
+
+    // function loop() {
+    //     updateCursor();
+    //     requestAnimationFrame(loop);
+    // }
+
+    // requestAnimationFrame(loop);
+
+    let c = document.querySelector(".c");
+
+    window.addEventListener("mousemove", (e) => {
+
+        requestAnimationFrame(() => {
+            c.style.top = e.pageY + "px";
+            c.style.left = e.pageX + "px";
+
+            let d = document.createElement("div");
+            d.classList.add('co');
+            d.style.top = e.pageY + "px";
+            d.style.left = e.pageX + "px";
+            d.style.setProperty(`--hue`, Math.floor(Math.random() * 360));
+
+            setTimeout(() => {
+                d.style.opacity = 0;
+                d.style.transform = 'scale(12)';
+                setTimeout(() => c.removeChild(d), 1100);
+            }, 500)
+
+            c.appendChild(d);
+        })
+
+    });
 }

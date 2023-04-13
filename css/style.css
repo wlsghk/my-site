@@ -9,7 +9,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: #222;
-
 }
 
 section {
@@ -74,7 +73,7 @@ section {
 }
 
 /* 마우스 커서 */
-#cursor {
+/* #cursor {
     position: fixed;
     z-index: 99;
     left: 0;
@@ -98,37 +97,7 @@ section {
             width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
             height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     }
-
-    #cursor.arrow .cursor__circle {
-        width: 128px;
-        height: 128px;
-        background-color: #073099;
-        border-color: #073099;
-    }
-
-    #cursor.arrow::after {
-        content: '';
-        position: absolute;
-        left: -50%;
-        top: -50%;
-        width: 100%;
-        height: 100%;
-        background-image: url('https://svgshare.com/i/MzQ.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    #cursor.subtle .cursor__circle {
-        opacity: 0.16;
-    }
-
-    #cursor.overlay .cursor__circle {
-        width: 48px;
-        height: 48px;
-        background-color: rgba(227, 222, 193, 0.08);
-        border-color: transparent;
-    }
-}
+} */
 
 /* 컨테이너 */
 .wrapper {}
@@ -162,6 +131,53 @@ section {
         opacity: 1;
         transform: translateX(0%);
     }
+}
+
+.main-scroll {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: #ddd;
+    animation: vibration .3s ease-in-out infinite;
+}
+
+@keyframes vibration {
+    from {
+        transform: rotate(1deg);
+    }
+
+    to {
+        transform: rotate(-1deg);
+    }
+}
+
+.c {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.ci {
+    width: 60px;
+    height: 60px;
+    border: 2px solid hsla(150 70% 70% / .6);
+    border-radius: 100px;
+    box-shadow: inset 0 0 25px hsla(150 70% 70% / .7);
+    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 20;
+}
+
+.co {
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    background: hsla(var(--hue) 70% 70% / .7);
+    position: fixed;
+    transition: 1s;
 }
 
 /* 스킬 */

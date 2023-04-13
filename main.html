@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="fonts.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+            zoom: 1;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Proxima Nova', sans-serif;
+        }
+
+        .hero {
+            height: 100%;
+            width: 100%;
+            font-size: 2em;
+            background: rgb(255, 255, 251);
+        }
+
+        .hero-tagline {
+            float: left;
+        }
+
+        .hero-intro {
+            text-align: center;
+        }
+
+        .word-slider {
+            height: 1em;
+            position: relative;
+            line-height: 1em;
+            margin: 0 .5em;
+            overflow: hidden;
+            float: left;
+            list-style-type: none;
+        }
+
+        .word-slider>li {
+            text-align: center;
+            -webkit-animation: word-slider 8s ease-in-out infinite;
+            -moz-animation: word-slider 8s ease-in-out infinite;
+            -o-animation: word-slider 8s ease-in-out infinite;
+            animation: word-slider 8s ease-in-out infinite;
+        }
+
+        @-webkit-keyframes word-slider {
+            0% {
+                -webkit-transform: translate3D(0, 0, 0);
+            }
+
+            33% {
+                -webkit-transform: translate3D(0, -100%, 0);
+            }
+
+            66% {
+                -webkit-transform: translate3D(0, -200%, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3D(0, -300%, 0);
+            }
+        }
+
+        @-moz-keyframes word-slider {
+            0% {
+                -moz-transform: translate3D(0, 0, 0);
+            }
+
+            33% {
+                -moz-transform: translate3D(0, -100%, 0);
+            }
+
+            66% {
+                -moz-transform: translate3D(0, -200%, 0);
+            }
+
+            100% {
+                -moz-transform: translate3D(0, -300%, 0);
+            }
+        }
+
+        @-o-keyframes word-slider {
+            0% {
+                -o-transform: translateY(0);
+            }
+
+            33% {
+                -o-transform: translateY(-100%);
+            }
+
+            66% {
+                -o-transform: translateY(-200%);
+            }
+
+            100% {
+                -o-transform: translateY(-300%);
+            }
+        }
+
+        @keyframes word-slider {
+            0% {
+                transform: translate3D(0, 0, 0);
+            }
+
+            33% {
+                transform: translate3D(0, -100%, 0);
+            }
+
+            66% {
+                transform: translate3D(0, -200%, 0);
+            }
+
+            100% {
+                transform: translate3D(0, -300%, 0);
+            }
+        }
+
+        footer {
+            width: 100%;
+            height: 5em;
+        }
+
+        .to-top {
+            display: block;
+            height: 50%;
+            margin: 1.25em auto;
+            text-align: center;
+            line-height: 2.5em;
+            cursor: pointer;
+        }
+
+        /*Utility Classes*/
+        .flexbox-container-center {
+            display: -webkit-box;
+            display: -moz-box;
+            display: box;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            box-align: center;
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            box-pack: center;
+        }
+
+        .flexbox-item-center {
+            -webkit-box-flex: 0;
+            -moz-box-flex: 0;
+            box-flex: 0;
+        }
+
+        .ie9 .flexbox-container-center {
+            display: table;
+        }
+
+        .ie9 .flexbox-item-center {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .group:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        li {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<!--[if lt IE 7]>	<body class="ie6">		<![endif]-->
+<!--[if IE 7]>		<body class="ie7">		<![endif]-->
+<!--[if IE 8]>		<body class="ie8">		<![endif]-->
+<!--[if IE 9]>		<body class="ie9">		<![endif]-->
+<!--[if gt IE 9]>	<body class="ie10+">	<![endif]-->
+<!--[if !IE]><!-->
+
+<body> <!--<![endif]-->
+    <section class="hero flexbox-container-center">
+        <article class="flexbox-item-center">
+            <h1 class="hero-intro">Hello, Stranger.<br>I'm Front-end Developer!</h1>
+            <div class="inline-block group">
+                <h1 class="hero-tagline">I Make</h1>
+                <ul class="word-slider">
+                    <li>Engaging</li>
+                    <li>Delightful</li>
+                    <li>Friendly</li>
+                    <li>Engaging</li>
+                </ul>
+                <h1 class="hero-tagline">Websites.</h1>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <span class="to-top">To the Top!</span>
+    </footer>
+</body>
+
+</html>
