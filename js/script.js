@@ -1,4 +1,11 @@
 window.onload = function () {
+    console.log(`
+📂 Hello
+  └📁 Stranger
+     └📁 WelcomeTo
+        └⚠️ MySite.html
+
+`);
     // 원 페이지 스크롤
     docSlider.init();
 

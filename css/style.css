@@ -66,9 +66,44 @@ section {
     width: 30px;
 }
 
+/* 헤더 반응형 */
 @media screen and (max-width: 991px) {
     .navbar-logo {
         display: none;
+    }
+
+    button.navbar-toggler {
+        padding: 0px 12px 20px 0px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .navbar-brand {
+        font-size: 2.78vw;
+    }
+
+    .navbar-brand-txt {
+        font-size: 2.22vw;
+    }
+
+    .navbar-toggler-icon {
+        width: 4.17vw;
+        height: 4.17vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .navbar-brand-txt {
+        font-size: 13px;
+    }
+
+    .navbar-toggler-icon {
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -149,6 +184,36 @@ section {
     background: hsla(var(--hue) 70% 70% / .7);
     position: fixed;
     transition: 1s;
+}
+
+/* 메인 페이지 반응형 */
+@media screen and (max-width: 1600px) {
+    .main-title {
+        font-size: 6.25vw;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .docSlider-button {
+        display: none;
+    }
+
+    .main-scroll {
+        font-size: 1.95vw;
+    }
+}
+
+
+@media screen and (max-width: 720px) {
+    .main-scroll {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-title {
+        font-size: 20px;
+    }
 }
 
 /* 스킬 */
