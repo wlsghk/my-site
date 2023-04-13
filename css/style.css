@@ -347,6 +347,54 @@ section {
     margin-bottom: 30px;
 }
 
+/* 스킬 반응형 */
+@media screen and (max-width: 1410px) {
+    .my-explain {
+        font-size: 1.42vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .my-explain {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .my-pic {
+        width: 90.82vw;
+    }
+
+    .my-pic img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .my-explain {
+        align-content: center;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .my-pic img {
+        width: 27.78vw;
+        height: 27.78vw;
+    }
+
+    .my-explain {
+        font-size: 2.36vw;
+    }
+}
+
+@media screen and (max-width: 551px) {
+    .my-pic img {}
+
+    .my-explain {
+        font-size: 13px;
+    }
+}
+
 /* 막대 그래프 */
 .graph {
     background: #ccc;

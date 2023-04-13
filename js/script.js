@@ -177,6 +177,14 @@ window.onload = function () {
 
             c.appendChild(d);
         })
-
     });
+
+    // 미디어쿼리
+    window.addEventListener('resize', e => {
+        if (innerWidth <= 991) {
+            myPic.src = "./img/myprofile-mobile.png"
+        } else {
+            myPic.src = "./img/myprofile.png"
+        }
+    })
 }
