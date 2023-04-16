@@ -367,8 +367,10 @@ section {
     }
 
     .my-pic {
-        width: 94vw;
-        padding: 24px;
+        width: 93%;
+        padding: 0px;
+        margin-left: 12px;
+        padding-right: 2.42vw;
     }
 
     .my-pic img {
