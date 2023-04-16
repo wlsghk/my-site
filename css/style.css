@@ -406,16 +406,19 @@ section {
 
     .skill-title {
         padding: 0px;
-        margin-left: 0px;
+        margin-left: -30px;
+        justify-content: center;
     }
 
     .skill-box {
         padding: 0px;
+        margin: 0px;
     }
 
     .skill-box ul {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .skill-item img {
