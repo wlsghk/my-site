@@ -932,18 +932,23 @@ section {
         width: 100%;
     }
 
-    .gmail {
-        font-size: 14px;
-    }
-
     .final-goal {
         width: 100%;
-        font-size: 14px;
         bottom: 200px;
     }
 
     .copyright {
         font-size: 1.70vw;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .gmail {
+        font-size: 13px;
+    }
+
+    .final-goal {
+        font-size: 13px;
     }
 }
 

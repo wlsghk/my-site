@@ -128,8 +128,6 @@ window.onload = function () {
         finalGoal.style.display = "none"
     })
 
-
-
     let c = document.querySelector(".c");
 
     window.addEventListener("mousemove", (e) => {
