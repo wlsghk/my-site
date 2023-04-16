@@ -34,43 +34,18 @@ window.onload = function () {
     })
 
     // 스킬 그래프
-    const myPic = document.querySelector('.my-pic img')
-    const myExplain = document.querySelector('.my-explain')
-    const html = document.querySelector('.html');
-    const css = document.querySelector('.css');
-    const js = document.querySelector('.js');
-    const git = document.querySelector('.git');
-    const react = document.querySelector('.react');
-    const adobe = document.querySelector('.adobe');
-    const figma = document.querySelector('.figma');
-    const htmlGraph = document.querySelector('.html-graph');
-    const cssGraph = document.querySelector('.css-graph');
-    const jsGraph = document.querySelector('.js-graph');
-    const reactGraph = document.querySelector('.react-graph');
-    const gitGraph = document.querySelector('.git-graph');
-    const adobeGraph = document.querySelector('.adobe-graph');
-    const figmaGraph = document.querySelector('.figma-graph');
-    const switchBtn = document.querySelector('.onoff-switch')
+    const myPic = document.querySelector('.my-pic img');
+    const myExplain = document.querySelector('.my-explain');
+    const switchBtn = document.querySelector('.onoff-switch');
+    const skillItems = document.querySelectorAll('.skill-item');
 
-    switchBtn.addEventListener('click', e => {
+    switchBtn.addEventListener('click', () => {
+        skillItems.forEach(item => {
+            item.classList.toggle('on')
+            item.querySelector('span').classList.toggle('on')
+        })
         myPic.classList.toggle('on');
         myExplain.classList.toggle('on');
-
-        html.classList.toggle('on');
-        css.classList.toggle('on');
-        js.classList.toggle('on');
-        react.classList.toggle('on');
-        git.classList.toggle('on');
-        adobe.classList.toggle('on');
-        figma.classList.toggle('on');
-
-        htmlGraph.classList.toggle('on');
-        cssGraph.classList.toggle('on');
-        jsGraph.classList.toggle('on');
-        reactGraph.classList.toggle('on');
-        gitGraph.classList.toggle('on');
-        adobeGraph.classList.toggle('on');
-        figmaGraph.classList.toggle('on')
     })
 
     // 포트폴리오 스와이퍼
@@ -179,21 +154,24 @@ window.onload = function () {
         })
     });
 
+
     // 미디어쿼리
-    const skillBox = document.querySelector('.skill-box');
-    function mobResize() {
-        if (matchMedia("screen and (max-width: 991px)").matches) {
-            myPic.src = "./img/myprofile-mobile.png"
-        } else {
-            myPic.src = "./img/myprofile.png"
-        }
-    }
-    mobResize();
-    window.addEventListener('resize', e => {
-        if (innerWidth <= 991) {
-            myPic.src = "./img/myprofile-mobile.png"
-        } else {
-            myPic.src = "./img/myprofile.png"
-        }
-    })
+    // let isContentChanged = false;
+    // const skillBox = document.querySelector('.skill-box');
+    // function mobResize() {
+    //     if (matchMedia("screen and (max-width: 991px)").matches) {
+    //         myPic.src = "./img/myprofile-mobile.png";
+    //     } else {
+    //         myPic.src = "./img/myprofile.png";
+    //     }
+    // }
+    // mobResize();
+
+    // window.addEventListener('resize', e => {
+    //     if (innerWidth <= 991) {
+    //         myPic.src = "./img/myprofile-mobile.png";
+    //     } else {
+    //         myPic.src = "./img/myprofile.png";
+    //     }
+    // });
 }

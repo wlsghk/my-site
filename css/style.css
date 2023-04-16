@@ -361,26 +361,68 @@ section {
 }
 
 @media screen and (max-width: 991px) {
+    .skill .row {
+        align-content: flex-start;
+        align-items: flex-end;
+    }
+
     .my-pic {
-        width: 90.82vw;
+        width: 94vw;
+        padding: 24px;
     }
 
     .my-pic img {
-        width: 200px;
-        height: 200px;
+        filter: none;
+        height: 53.48vw;
     }
 
     .my-explain {
         align-content: center;
-        margin-left: 10px;
+        filter: none;
+        color: #222;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .switch-button {
+        display: none;
+    }
+
+    .skill-box {
+        margin-left: 12px;
+    }
+
+    .skill-item {
+        opacity: 1;
+        display: inline;
+    }
+
+    .graph {
+        display: none;
+    }
+
+    .skill-title {
+        padding: 0px;
+        margin-left: 0px;
+    }
+
+    .skill-box {
+        padding: 0px;
+    }
+
+    .skill-box ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .skill-item img {
+        padding-left: 0px;
+        margin-right: 20px;
+        width: 90px;
     }
 }
 
 @media screen and (max-width: 720px) {
-    .my-pic img {
-        width: 27.78vw;
-        height: 27.78vw;
-    }
 
     .my-explain {
         font-size: 2.36vw;
@@ -388,7 +430,6 @@ section {
 }
 
 @media screen and (max-width: 551px) {
-    .my-pic img {}
 
     .my-explain {
         font-size: 13px;
@@ -616,12 +657,12 @@ section {
 }
 
 .conteudo {
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    align-content: center
+    align-content: center;
+    align-items: flex-end
 }
 
 .tela {
@@ -635,8 +676,9 @@ section {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url('../img/daegu.png');
+    background: url('../img/daegu.png') no-repeat;
     background-size: cover;
+    background-position: center;
     color: white;
 }
 
@@ -646,6 +688,7 @@ section {
     height: 100%;
     background: url('../img/hyft.png');
     background-size: cover;
+    background-position: center;
     color: white;
 }
 
@@ -655,6 +698,7 @@ section {
     height: 100%;
     background: url('../img/dosirak.png');
     background-size: cover;
+    background-position: center;
     color: white;
 }
 
@@ -664,6 +708,7 @@ section {
     height: 100%;
     background: url('../img/baevolution.png');
     background-size: cover;
+    background-position: center;
     color: white;
 }
 
@@ -676,7 +721,6 @@ section {
     opacity: 0.7;
     animation: visible 0.5s;
 }
-
 
 .area1 span,
 .area2 span,
@@ -726,6 +770,39 @@ section {
     margin-top: 15px;
 }
 
+/* 포트폴리오 반응형 */
+@media screen and (max-width: 1525px) {
+
+    .area-subtitle,
+    .area-subtitle span {
+        font-size: 1.04vw !important;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+
+    .area-subtitle,
+    .area-subtitle span {
+        font-size: 15px !important;
+    }
+}
+
+@media screen and (max-width: 719px) {
+
+    .area-subtitle,
+    .area-subtitle span {
+        font-size: 2.09vw !important;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    .area-subtitle,
+    .area-subtitle span {
+        font-size: 13px !important;
+    }
+}
+
 /* 마지막 페이지 */
 .final {
     align-items: center;
@@ -762,7 +839,7 @@ section {
     position: absolute;
     margin-left: 4.5vw;
     color: rgba(255, 255, 255, 0.9);
-    bottom: 20%;
+    bottom: 180px;
     font-size: 18px;
     letter-spacing: -2px;
     text-align: justify;
@@ -770,11 +847,10 @@ section {
     line-height: 1.5;
 }
 
-
 .gmail {
     color: #fff;
     position: fixed;
-    bottom: 190px;
+    bottom: 20%;
     right: 200px;
     font-size: 18px;
 }
@@ -786,4 +862,31 @@ section {
     bottom: 50px;
     left: 4.3vw;
     padding: 24px;
+}
+
+/* 마지막 페이지 반응형 */
+@media screen and (max-width: 1200px) {
+    .final-text {
+        font-size: 5.83vw;
+    }
+
+    .gmail {
+        top: 59.17vw;
+        font-size: 1.50vw;
+    }
+
+    .final-goal {
+        top: 56vw;
+        font-size: 1.50vw;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .gmail {
+        font-size: 14px;
+    }
+
+    .final-goal {
+        font-size: 14px;
+    }
 }
