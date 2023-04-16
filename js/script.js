@@ -153,24 +153,4 @@ window.onload = function () {
             c.appendChild(d);
         })
     });
-
-
-    // 미디어쿼리
-    const finalImg = document.querySelector('.final img')
-    function mobResize() {
-        if (matchMedia("screen and (max-width: 500px)").matches) {
-            finalImg.src = "../img/coding.gif";
-        } else {
-            finalImg.src = "./img/coding.png";
-        }
-    }
-    mobResize();
-
-    window.addEventListener('resize', e => {
-        if (innerWidth <= 500) {
-            finalImg.src = "./img/coding.gif";
-        } else {
-            finalImg.src = "./img/coding.png";
-        }
-    });
 }
