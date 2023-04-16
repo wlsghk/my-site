@@ -963,7 +963,16 @@ section {
 }
 
 @media screen and (max-width: 500px) {
+    .final-text {
+        color: #fff;
+    }
+
+    .final-text:hover .white {
+        color: #fff;
+    }
+
     .final-goal {
         bottom: 400px;
+        display: block !important;
     }
 }

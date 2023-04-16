@@ -114,20 +114,8 @@ window.onload = function () {
         window.open('https://github.com/wlsghk/my-site');
     })
 
-    // 파이널 페이지 마우스 오버시 배경 재생
-    const finalText = document.querySelector('.final-text')
-    const codingImg = document.querySelector('.final-img')
-    const finalGoal = document.querySelector('.final-goal')
 
-    finalText.addEventListener('mouseover', e => {
-        codingImg.src = "./img/coding.gif"
-        finalGoal.style.display = "block";
-    })
-    finalText.addEventListener('mouseout', e => {
-        codingImg.src = "./img/coding.png"
-        finalGoal.style.display = "none"
-    })
-
+    // 메인 페이지 마우스 효과
     let c = document.querySelector(".c");
 
     window.addEventListener("mousemove", (e) => {
@@ -151,4 +139,30 @@ window.onload = function () {
             c.appendChild(d);
         })
     });
+
+    // 파이널 페이지 마우스 오버시 배경 재생
+    const finalText = document.querySelector('.final-text')
+    const codingImg = document.querySelector('.final-img')
+    const finalGoal = document.querySelector('.final-goal')
+    function finalImageSrc() {
+        const finalImg = document.querySelector('.final > img');
+        if (window.innerWidth <= 500) {
+            finalImg.src = './img/coding.gif';
+        } else {
+            finalImg.src = './img/coding.png';
+            finalText.addEventListener('mouseover', e => {
+                codingImg.src = "./img/coding.gif"
+                finalGoal.style.display = "block";
+            })
+            finalText.addEventListener('mouseout', e => {
+                codingImg.src = "./img/coding.png"
+                finalGoal.style.display = "none"
+            })
+
+        }
+    }
+
+    finalImageSrc(); // 초기 실행
+
+    window.addEventListener('resize', finalImageSrc); // window 크기가 변경될 때마다 실행
 }
