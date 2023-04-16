@@ -392,6 +392,7 @@ section {
 
     .skill-box {
         margin-left: 12px;
+        width: 95%;
     }
 
     .skill-item {
@@ -425,16 +426,30 @@ section {
 }
 
 @media screen and (max-width: 720px) {
+    .skill-title {
+        font-size: 3.33vw;
+    }
 
     .my-explain {
         font-size: 2.36vw;
     }
+
+    .skill-item img {
+        width: 12.50vw;
+    }
 }
 
 @media screen and (max-width: 551px) {
+    .skill-title {
+        font-size: 18.3px;
+    }
 
     .my-explain {
         font-size: 13px;
+    }
+
+    .skill-item img {
+        width: 68.88px;
     }
 }
 
