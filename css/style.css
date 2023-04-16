@@ -406,7 +406,7 @@ section {
 
     .skill-title {
         padding: 0px;
-        margin-left: -30px;
+        margin-left: -25px;
         justify-content: center;
     }
 
@@ -688,7 +688,7 @@ section {
 .tela {
     background: #fff;
     width: 95%;
-    height: 45vh;
+    height: 400px;
     box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -813,11 +813,14 @@ section {
     .area-subtitle span {
         font-size: 2.09vw !important;
     }
-}
 
-@media screen and (max-width: 713px) {
+    .conteudo {
+        align-items: center;
+        padding-left: 35px;
+    }
+
     .tela {
-        height: 40vh;
+        width: 80%;
     }
 
     .btn-outline-dark {
@@ -825,6 +828,8 @@ section {
         font-size: 12px;
     }
 }
+
+@media screen and (max-width: 713px) {}
 
 @media screen and (max-width: 570px) {
 
