@@ -811,12 +811,12 @@ section {
     .swiper {
         width: 90%;
         height: 500px;
-        transform: translate(0%, 50%);
+        transform: translate(0%, 40%);
     }
 
     .swiper-button-next:after,
     .swiper-button-prev:after {
-        margin-top: 120px;
+        margin-top: 110px;
     }
 
     .area-subtitle,
@@ -826,7 +826,7 @@ section {
 
     .conteudo {
         align-items: center;
-        padding-left: 30px;
+        padding-left: 15px;
     }
 
     .tela {
@@ -870,7 +870,7 @@ section {
     line-height: 1.2;
 }
 
-.final-text:hover span {
+.final-text:hover .white {
     color: rgba(255, 255, 255, 1);
 }
 
@@ -910,6 +910,10 @@ section {
 
 /* 마지막 페이지 반응형 */
 @media screen and (max-width: 1200px) {
+    .final {
+        overflow-x: hidden;
+    }
+
     .final-text {
         font-size: 5.83vw;
     }
@@ -924,12 +928,37 @@ section {
 }
 
 @media screen and (max-width: 940px) {
+    .final-text {
+        width: 100%;
+    }
+
     .gmail {
         font-size: 14px;
     }
 
     .final-goal {
+        width: 100%;
         font-size: 14px;
-        bottom: 370px;
+        bottom: 200px;
+    }
+
+    .copyright {
+        font-size: 1.70vw;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .copyright {
+        font-size: 12.24px;
+    }
+
+    .final-goal {
+        bottom: 300px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .final-goal {
+        bottom: 400px;
     }
 }

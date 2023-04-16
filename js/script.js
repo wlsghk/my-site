@@ -156,22 +156,21 @@ window.onload = function () {
 
 
     // 미디어쿼리
-    // let isContentChanged = false;
-    // const skillBox = document.querySelector('.skill-box');
-    // function mobResize() {
-    //     if (matchMedia("screen and (max-width: 991px)").matches) {
-    //         myPic.src = "./img/myprofile-mobile.png";
-    //     } else {
-    //         myPic.src = "./img/myprofile.png";
-    //     }
-    // }
-    // mobResize();
+    const finalImg = document.querySelector('.final img')
+    function mobResize() {
+        if (matchMedia("screen and (max-width: 500px)").matches) {
+            finalImg.src = "../img/coding.gif";
+        } else {
+            finalImg.src = "./img/coding.png";
+        }
+    }
+    mobResize();
 
-    // window.addEventListener('resize', e => {
-    //     if (innerWidth <= 991) {
-    //         myPic.src = "./img/myprofile-mobile.png";
-    //     } else {
-    //         myPic.src = "./img/myprofile.png";
-    //     }
-    // });
+    window.addEventListener('resize', e => {
+        if (innerWidth <= 500) {
+            finalImg.src = "./img/coding.gif";
+        } else {
+            finalImg.src = "./img/coding.png";
+        }
+    });
 }
