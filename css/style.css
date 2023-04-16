@@ -808,6 +808,16 @@ section {
 }
 
 @media screen and (max-width: 719px) {
+    .swiper {
+        width: 90%;
+        height: 500px;
+        transform: translate(0%, 50%);
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        margin-top: 120px;
+    }
 
     .area-subtitle,
     .area-subtitle span {
@@ -816,11 +826,11 @@ section {
 
     .conteudo {
         align-items: center;
-        padding-left: 35px;
+        padding-left: 30px;
     }
 
     .tela {
-        width: 80%;
+        width: 90%;
     }
 
     .btn-outline-dark {
@@ -828,8 +838,6 @@ section {
         font-size: 12px;
     }
 }
-
-@media screen and (max-width: 713px) {}
 
 @media screen and (max-width: 570px) {
 
@@ -907,12 +915,10 @@ section {
     }
 
     .gmail {
-        top: 59.17vw;
         font-size: 1.50vw;
     }
 
     .final-goal {
-        top: 56vw;
         font-size: 1.50vw;
     }
 }
@@ -924,5 +930,6 @@ section {
 
     .final-goal {
         font-size: 14px;
+        bottom: 370px;
     }
 }
