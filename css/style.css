@@ -815,6 +815,17 @@ section {
     }
 }
 
+@media screen and (max-width: 713px) {
+    .tela {
+        height: 40vh;
+    }
+
+    .btn-outline-dark {
+        width: 60px;
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-width: 570px) {
 
     .area-subtitle,
