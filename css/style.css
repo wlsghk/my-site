@@ -186,6 +186,22 @@ section {
     transition: 1s;
 }
 
+/* 마우스 애니메이션 태블릿 크기에서 삭제 */
+@media screen and (max-width: 820px) {
+    .c {
+        display: none;
+    }
+
+    .ci {
+        display: none;
+    }
+
+    .co {
+        display: none;
+    }
+}
+
+
 /* 메인 페이지 반응형 */
 @media screen and (max-width: 1600px) {
     .main-title {
@@ -973,6 +989,13 @@ section {
 
     .final-goal {
         bottom: 400px;
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .final-goal {
+        bottom: 300px;
         display: block !important;
     }
 }

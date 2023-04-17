@@ -116,28 +116,61 @@ window.onload = function () {
 
 
     // 메인 페이지 마우스 효과
+    // let c = document.querySelector(".c");
+
+    // window.addEventListener("mousemove", (e) => {
+
+    //     requestAnimationFrame(() => {
+    //         c.style.top = e.pageY + "px";
+    //         c.style.left = e.pageX + "px";
+
+    //         let d = document.createElement("div");
+    //         d.classList.add('co');
+    //         d.style.top = e.pageY + "px";
+    //         d.style.left = e.pageX + "px";
+    //         d.style.setProperty(`--hue`, Math.floor(Math.random() * 360));
+
+    //         setTimeout(() => {
+    //             d.style.opacity = 0;
+    //             d.style.transform = 'scale(12)';
+    //             setTimeout(() => c.removeChild(d), 1100);
+    //         }, 500)
+
+    //         c.appendChild(d);
+    //     })
+    // });
     let c = document.querySelector(".c");
+    let isMouseActive = true; // 마우스 이벤트 활성화 상태를 저장하는 변수
 
     window.addEventListener("mousemove", (e) => {
+        if (isMouseActive) { // 마우스 이벤트가 활성화된 경우에만 실행
+            requestAnimationFrame(() => {
+                c.style.top = e.pageY + "px";
+                c.style.left = e.pageX + "px";
 
-        requestAnimationFrame(() => {
-            c.style.top = e.pageY + "px";
-            c.style.left = e.pageX + "px";
+                let d = document.createElement("div");
+                d.classList.add('co');
+                d.style.top = e.pageY + "px";
+                d.style.left = e.pageX + "px";
+                d.style.setProperty(`--hue`, Math.floor(Math.random() * 360));
 
-            let d = document.createElement("div");
-            d.classList.add('co');
-            d.style.top = e.pageY + "px";
-            d.style.left = e.pageX + "px";
-            d.style.setProperty(`--hue`, Math.floor(Math.random() * 360));
+                setTimeout(() => {
+                    d.style.opacity = 0;
+                    d.style.transform = 'scale(12)';
+                    setTimeout(() => c.removeChild(d), 1100);
+                }, 500)
 
-            setTimeout(() => {
-                d.style.opacity = 0;
-                d.style.transform = 'scale(12)';
-                setTimeout(() => c.removeChild(d), 1100);
-            }, 500)
+                c.appendChild(d);
+            });
+        }
+    });
 
-            c.appendChild(d);
-        })
+    window.addEventListener("resize", () => {
+        if (window.innerWidth <= 820) { // innerWidth가 820px 이하인 경우에 이벤트 비활성화
+            isMouseActive = false;
+        } else { // innerWidth가 820px 초과인 경우에 이벤트 활성화
+            isMouseActive = true;
+        }
     });
 
     // 파이널 페이지 마우스 오버시 배경 재생
