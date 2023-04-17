@@ -899,7 +899,7 @@ section {
     position: absolute;
     margin-left: 4.5vw;
     color: rgba(255, 255, 255, 0.9);
-    bottom: 180px;
+    top: 690px;
     font-size: 18px;
     letter-spacing: -2px;
     text-align: justify;
@@ -950,7 +950,7 @@ section {
 
     .final-goal {
         width: 100%;
-        bottom: 200px;
+        top: 73.40vw;
     }
 
     .copyright {
@@ -972,9 +972,12 @@ section {
     .copyright {
         font-size: 12.24px;
     }
+}
 
+@media screen and (max-width: 540px) {
     .final-goal {
-        bottom: 300px;
+        display: block !important;
+        top: 360px;
     }
 }
 
@@ -988,14 +991,12 @@ section {
     }
 
     .final-goal {
-        bottom: 400px;
         display: block !important;
     }
 }
 
 @media screen and (max-width: 375px) {
     .final-goal {
-        bottom: 300px;
         display: block !important;
     }
 }
