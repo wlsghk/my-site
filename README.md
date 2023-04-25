@@ -11,7 +11,7 @@
 </ul>
 <h3>⚙ 개발 환경</h3>
 <ul>
-<img src="https://img.shields.io/badge/html5-F24E1E?style=for-the-badge&logo=html5&logoColor=black"><img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"><img src="https://img.shields.io/badge/javascript-764ABC?style=for-the-badge&logo=JavaScript&logoColor=purple"></li>
+<img src="https://img.shields.io/badge/html5-F24E1E?style=for-the-badge&logo=html5&logoColor=black"><img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"><img src="https://img.shields.io/badge/javascript-764ABC?style=for-the-badge&logo=JavaScript&logoColor=purple"><img src="https://img.shields.io/badge/bootstrap-4D2B1A?style=for-the-badge&logo=Bootstrap&logoColor=white"></li>
 </ul>
 <h3>🔎 사이트</h3>
 <ul>https://wlsghk.github.io/my-site/index.html</ul>
