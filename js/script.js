@@ -83,7 +83,7 @@ window.onload = function () {
     const baevolutionGithub = document.querySelector('.baevolution-github-btn');
 
     daeguDemo.addEventListener('click', e => {
-        window.open('https://wlsghk.github.io/WelcomeDaegu-1stTeamProject/first.html');
+        window.open('https://github.com/wlsghk/WelcomeDaegu-1stTeamProject');
     })
 
     daeguGithub.addEventListener('click', e => {
