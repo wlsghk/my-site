@@ -87,7 +87,7 @@ window.onload = function () {
     })
 
     daeguGithub.addEventListener('click', e => {
-        window.open('https://github.com/wlsghk/firstProject');
+        window.open('https://wlsghk.github.io/WelcomeDaegu-1stTeamProject/first.html');
     })
 
     hyftDemo.addEventListener('click', e => {
