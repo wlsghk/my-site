@@ -81,6 +81,8 @@ window.onload = function () {
     const dosirakGithub = document.querySelector('.dosirak-github-btn');
     const baevolutionDemo = document.querySelector('.baevolution-demo-btn');
     const baevolutionGithub = document.querySelector('.baevolution-github-btn');
+    const todoDemo = document.querySelector('.todo-demo-btn');
+    const todoGithub = document.querySelector('.todo-github-btn');
 
     daeguDemo.addEventListener('click', e => {
         window.open('https://wlsghk.github.io/WelcomeDaegu-1stTeamProject/first.html');
@@ -111,6 +113,14 @@ window.onload = function () {
     })
 
     baevolutionGithub.addEventListener('click', e => {
+        window.open('https://github.com/wlsghk/my-todo');
+    })
+
+    todoDemo.addEventListener('click', e => {
+        window.open('https://wlsghk.github.io/my-todo/');
+    })
+
+    todoGithub.addEventListener('click', e => {
         window.open('https://github.com/wlsghk/my-site');
     })
 

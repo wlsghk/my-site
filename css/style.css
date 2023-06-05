@@ -522,13 +522,13 @@ section {
 .stack4 {
     animation: stack4 2s 1;
     background-color: #2790ff;
-    width: 40%;
+    width: 60%;
 }
 
 .stack5 {
     animation: stack5 2s 1;
     background-color: #000;
-    width: 60%;
+    width: 65%;
 }
 
 .stack6 {
@@ -600,7 +600,7 @@ section {
     }
 
     100% {
-        width: 40%;
+        width: 60%;
     }
 }
 
@@ -615,7 +615,7 @@ section {
     }
 
     100% {
-        width: 60%;
+        width: 65%;
     }
 }
 
@@ -748,6 +748,16 @@ section {
     color: white;
 }
 
+.area5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/todo.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
 .black-box {
     position: relative;
     display: none;
@@ -761,14 +771,16 @@ section {
 .area1 span,
 .area2 span,
 .area3 span,
-.area4 span {
+.area4 span,
+.area5 span {
     font-size: 20px;
 }
 
 .area1 p,
 .area2 p,
 .area3 p,
-.area4 p {
+.area4 p,
+.area5 p {
     z-index: 999;
     position: absolute;
     transform: translate(5%);
@@ -781,7 +793,8 @@ section {
 .area1:hover .black-box,
 .area2:hover .black-box,
 .area3:hover .black-box,
-.area4:hover .black-box {
+.area4:hover .black-box,
+.area5:hover .black-box {
     display: block;
 }
 
