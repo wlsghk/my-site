@@ -346,12 +346,14 @@ section {
     align-items: center;
     gap: 2vw;
     opacity: 0.5;
+    height: 90px;
 }
 
 .html.on,
 .css.on,
 .js.on,
 .react.on,
+.ts.on,
 .adobe.on,
 .git.on,
 .figma.on {
@@ -543,6 +545,12 @@ section {
     width: 85%;
 }
 
+.stack8 {
+    animation: stack8 2s 1;
+    background: #3178c6;
+    width: 40%;
+}
+
 
 @keyframes stack1 {
     0% {
@@ -646,6 +654,21 @@ section {
 
     100% {
         width: 85%;
+    }
+}
+
+@keyframes stack8 {
+    0% {
+        width: 0;
+        color: rgba(255, 255, 255, 0);
+    }
+
+    40% {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        width: 40%;
     }
 }
 
