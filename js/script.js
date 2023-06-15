@@ -113,7 +113,7 @@ window.onload = function () {
     })
 
     baevolutionGithub.addEventListener('click', e => {
-        window.open('https://github.com/wlsghk/my-todo');
+        window.open('https://github.com/wlsghk/my-site');
     })
 
     todoDemo.addEventListener('click', e => {
@@ -121,7 +121,7 @@ window.onload = function () {
     })
 
     todoGithub.addEventListener('click', e => {
-        window.open('https://github.com/wlsghk/my-site');
+        window.open('https://github.com/wlsghk/my-todo');
     })
 
 
