@@ -33,24 +33,9 @@ window.onload = function () {
         })
     })
 
-    // 스킬 그래프
-    const myPic = document.querySelector('.my-pic img');
-    const myExplain = document.querySelector('.my-explain');
-    const switchBtn = document.querySelector('.onoff-switch');
-    const skillItems = document.querySelectorAll('.skill-item');
-
-    switchBtn.addEventListener('click', () => {
-        skillItems.forEach(item => {
-            item.classList.toggle('on')
-            item.querySelector('span').classList.toggle('on')
-        })
-        myPic.classList.toggle('on');
-        myExplain.classList.toggle('on');
-    })
-
     // 포트폴리오 스와이퍼
     var secondSwiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 30,
         navigation: {
             nextEl: ".swiper-button-next",

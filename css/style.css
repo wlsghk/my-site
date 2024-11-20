@@ -3,6 +3,7 @@
 @import url("./font.css");
 
 /* 공통 */
+
 body {
     font-family: 'Pretendard-R';
     margin: 0;
@@ -675,7 +676,7 @@ section {
 /* 포트폴리오 */
 .swiper {
     width: 90%;
-    height: 700px;
+    height: 680px;
     transform: translate(0%, 35%);
 }
 
