@@ -782,6 +782,36 @@ section {
     color: white;
 }
 
+.area6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/goryeong.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.area7 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/cartris.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.area8 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/new.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
 .black-box {
     position: relative;
     display: none;
@@ -796,7 +826,10 @@ section {
 .area2 span,
 .area3 span,
 .area4 span,
-.area5 span {
+.area5 span,
+.area6 span,
+.area7 span,
+.area8 span {
     font-size: 20px;
 }
 
@@ -804,7 +837,10 @@ section {
 .area2 p,
 .area3 p,
 .area4 p,
-.area5 p {
+.area5 p,
+.area6 p,
+.area7 p,
+.area8 p {
     z-index: 999;
     position: absolute;
     transform: translate(5%);
@@ -818,7 +854,10 @@ section {
 .area2:hover .black-box,
 .area3:hover .black-box,
 .area4:hover .black-box,
-.area5:hover .black-box {
+.area5:hover .black-box,
+.area6:hover .black-box,
+.area7:hover .black-box,
+.area8:hover .black-box {
     display: block;
 }
 

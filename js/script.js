@@ -68,6 +68,9 @@ window.onload = function () {
     const baevolutionGithub = document.querySelector('.baevolution-github-btn');
     const todoDemo = document.querySelector('.todo-demo-btn');
     const todoGithub = document.querySelector('.todo-github-btn');
+    const cartrisDemo = document.querySelector('.cartris-demo-btn');
+    const goryeongDemo = document.querySelector('.goryeong-demo-btn');
+    const newDemo = document.querySelector('.new-demo-btn');
 
     daeguDemo.addEventListener('click', e => {
         window.open('https://wlsghk.github.io/WelcomeDaegu-1stTeamProject/first.html');
@@ -107,6 +110,18 @@ window.onload = function () {
 
     todoGithub.addEventListener('click', e => {
         window.open('https://github.com/wlsghk/my-todo');
+    })
+
+    cartrisDemo.addEventListener('click', e => {
+        window.open('https://cartris.co.kr/')
+    })
+
+    goryeongDemo.addEventListener('click', e => {
+        window.open('http://goryeong2.or.kr/index.html')
+    })
+
+    newDemo.addEventListener('click', e => {
+        window.open('https://thenewgrey.co.kr/')
     })
 
 
